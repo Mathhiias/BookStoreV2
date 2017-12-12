@@ -1,31 +1,28 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Home";
 }
 
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <h1>Mathias' Book Store</h1>
+    <p class="lead">Hello and welcome to the book store.</p>
+    <p><a href="/Books" class="btn btn-primary btn-lg">Check out our books!</a></p>
 </div>
 
 <div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+    <div class="col" @*style="text-align:center"*@>
+        <h2>Why create a book store page</h2>
+        <p style="font-size: 18px;">
+            This web app is part of the Enterprise Computing program, its purpouse is to demonstrate the ability to
+            connect the app with Azure and a database. The theme chosen for this project was the book store where you 
+            are able to add/edit/delete Books or Authors. The app is being deployed through github and hosted by Azure.
         </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h3>Data Managed</h3>
+        <p style="font-size: 18px;">
+            The data being managed in this project is related to two objects: Author and Book.<br />
+            <b>Authors</b> contain an ID, the author's name, their date of birth and the country where they are from.<br />
+            <b>Books</b> contain an ID, an Author's ID with references to the Authors table, a title, the number of pages, 
+            the year the book was published, the price and a brief description of the book.
+        </p>
+        <p>@User.Identity.IsAuthenticated</p>
     </div>
 </div>
