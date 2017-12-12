@@ -54,9 +54,9 @@ namespace BookStore_Assignment2
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "175326539875160",
+               appSecret: "89e3da3f6a2ee39b593e5c8db8f3a82c");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{

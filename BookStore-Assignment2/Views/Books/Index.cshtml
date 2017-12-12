@@ -53,9 +53,14 @@
             @Html.DisplayFor(modelItem => item.Description)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.BookId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.BookId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.BookId })
+            <div class="btn-group">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    @Html.ActionLink("Edit", "Edit", new { id = item.BookId }, new { @class = "btn btn-default" })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.BookId }, new { @class = "btn btn-default" })
+                }
+                @Html.ActionLink("Details", "Details", new { id = item.BookId }, new { @class = "btn btn-default" })
+            </div>
         </td>
     </tr>
 }

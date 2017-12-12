@@ -35,6 +35,7 @@ namespace BookStore.Controllers
             return View(author);
         }
 
+        [Authorize]
         // GET: Authors/Create
         public ActionResult Create()
         {
@@ -58,6 +59,7 @@ namespace BookStore.Controllers
             return View(author);
         }
 
+        [Authorize]
         // GET: Authors/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -89,6 +91,7 @@ namespace BookStore.Controllers
             return View(author);
         }
 
+        [Authorize]
         // GET: Authors/Delete/5
         public ActionResult Delete(int? id)
         {

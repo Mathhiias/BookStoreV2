@@ -35,10 +35,15 @@
             @Html.DisplayFor(modelItem => item.Country)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.AuthorId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.AuthorId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.AuthorId })
-        </td>
+            <div class="btn-group">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    @Html.ActionLink("Edit", "Edit", new { id = item.AuthorId }, new { @class = "btn btn-default" });
+                    @Html.ActionLink("Delete", "Delete", new { id = item.AuthorId }, new { @class = "btn btn-default" });
+                }
+                @Html.ActionLink("Details", "Details", new { id = item.AuthorId }, new { @class = "btn btn-default" })
+            </div>
+</td>
     </tr>
 }
 
