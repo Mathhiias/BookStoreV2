@@ -7,6 +7,8 @@ using Microsoft.Owin.Security.Google;
 using Owin;
 using BookStore_Assignment2.Models;
 
+using System.Configuration;
+
 namespace BookStore_Assignment2
 {
     public partial class Startup
@@ -47,21 +49,21 @@ namespace BookStore_Assignment2
 
             // Uncomment the following lines to enable logging in with third party login providers
             app.UseMicrosoftAccountAuthentication(
-                clientId: "d8a7a969-b658-4eb1-b6f2-70ebc1ad8d33",
-                clientSecret: "klohDBAH5550^uozKBW2~^!");
+                clientId: ConfigurationManager.AppSettings["MicrosoftClientId"],
+                clientSecret: ConfigurationManager.AppSettings["MicrosoftClientSecret"]);
 
             app.UseTwitterAuthentication(
-               consumerKey: "lzbXWttY9my4ZWBmtWPuMsUpX",
-               consumerSecret: "FUAJEqKkPRVna6Atm2z0gWUzdityX4GdDtwOXntQ2mSN74FaJ5");
+               consumerKey: ConfigurationManager.AppSettings["TwitterConsumerKey"],
+               consumerSecret: ConfigurationManager.AppSettings["TwitterConsumerSecret"]);
 
             app.UseFacebookAuthentication(
-               appId: "175326539875160",
-               appSecret: "89e3da3f6a2ee39b593e5c8db8f3a82c");
+               appId: ConfigurationManager.AppSettings["FacebookAppId"],
+               appSecret: ConfigurationManager.AppSettings["FacebookAppSecret"]);
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
-                ClientId = "566524165940-sufttles71vph12mpo1ba5mfjk1fo0rv.apps.googleusercontent.com",
-                ClientSecret = "mAKpKcxSsvJoae0oQkYlM_U2"
+                ClientId = ConfigurationManager.AppSettings["GoogleClientId"],
+                ClientSecret = ConfigurationManager.AppSettings["GoogleClientId"]
             });
         }
     }
