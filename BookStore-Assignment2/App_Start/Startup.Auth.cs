@@ -50,9 +50,9 @@ namespace BookStore_Assignment2
                 clientId: "d8a7a969-b658-4eb1-b6f2-70ebc1ad8d33",
                 clientSecret: "klohDBAH5550^uozKBW2~^!");
 
-            //app.UseTwitterAuthentication(
-            //   consumerKey: "",
-            //   consumerSecret: "");
+            app.UseTwitterAuthentication(
+               consumerKey: "lzbXWttY9my4ZWBmtWPuMsUpX",
+               consumerSecret: "FUAJEqKkPRVna6Atm2z0gWUzdityX4GdDtwOXntQ2mSN74FaJ5");
 
             app.UseFacebookAuthentication(
                appId: "175326539875160",
