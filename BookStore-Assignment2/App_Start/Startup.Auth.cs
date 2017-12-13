@@ -46,9 +46,9 @@ namespace BookStore_Assignment2
             app.UseTwoFactorRememberBrowserCookie(DefaultAuthenticationTypes.TwoFactorRememberBrowserCookie);
 
             // Uncomment the following lines to enable logging in with third party login providers
-            //app.UseMicrosoftAccountAuthentication(
-            //    clientId: "",
-            //    clientSecret: "");
+            app.UseMicrosoftAccountAuthentication(
+                clientId: "d8a7a969-b658-4eb1-b6f2-70ebc1ad8d33",
+                clientSecret: "klohDBAH5550^uozKBW2~^!");
 
             //app.UseTwitterAuthentication(
             //   consumerKey: "",
