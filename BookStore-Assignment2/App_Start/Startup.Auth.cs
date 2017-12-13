@@ -58,11 +58,11 @@ namespace BookStore_Assignment2
                appId: "175326539875160",
                appSecret: "89e3da3f6a2ee39b593e5c8db8f3a82c");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "566524165940-sufttles71vph12mpo1ba5mfjk1fo0rv.apps.googleusercontent.com",
+                ClientSecret = "mAKpKcxSsvJoae0oQkYlM_U2"
+            });
         }
     }
 }

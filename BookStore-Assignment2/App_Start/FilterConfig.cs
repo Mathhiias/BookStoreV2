@@ -8,6 +8,8 @@ namespace BookStore_Assignment2
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            //force ssl
+            filters.Add(new RequireHttpsAttribute());
         }
     }
 }
